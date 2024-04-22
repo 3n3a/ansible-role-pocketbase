@@ -1,0 +1,14 @@
+[Unit]
+Description=Pocketbase CMS - {{ pb_instance_name }}
+
+[Container]
+Image={{ pb_container_image }}
+PublishPort={{ pb_instance_port }}:8080
+HostName={{ pb_container_hostname }}-{{ pb_instance_name }}
+AutoUpdate={{ pb_container_update }}
+Volume=/opt/{{ pb_container_hostname }}-{{ pb_instance_name }}/data:/pb_data
+Volume=/opt/{{ pb_container_hostname }}-{{ pb_instance_name }}/public:/pb_public
+Network={{ pb_container_hostname }}-{{ pb_instance_name }}-net.network
+
+[Install]
+WantedBy=default.target

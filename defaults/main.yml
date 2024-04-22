@@ -1,0 +1,17 @@
+---
+# defaults file for pocketbase
+
+# quadlets
+pb_quadlet_path: '/etc/containers/systemd'
+pb_systemd_scope: 'system'
+
+# pocketbase instance
+# you are expected to change these two variables
+pb_instance_name: 'please change this'
+pb_instance_port: 8081
+
+# pocketbase
+pb_container_name: 'pocketbase'
+pb_container_image: 'docker.io/3n3a/pb:latest'
+pb_container_hostname: 'pb'
+pb_container_update: 'registry' # update from registry. options: "local" / "registry"

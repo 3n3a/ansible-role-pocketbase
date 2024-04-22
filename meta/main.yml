@@ -1,0 +1,22 @@
+galaxy_info:
+  author: 3n3a
+  description: Pocketbase as a podman quadlet
+  company: "3n3a IT"
+  license: "license (BSD, MIT)"
+  min_ansible_version: 2.10
+  platforms:
+    - name: Fedora
+      versions:
+        - all
+    - name: CentOS
+      versions:
+        - all
+  galaxy_tags:
+    - cms
+    - podman
+    - container
+    - quadlet
+    - pocketbase
+
+dependencies:
+  - 3n3a.podman
