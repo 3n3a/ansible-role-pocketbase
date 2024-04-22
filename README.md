@@ -1,22 +1,26 @@
-Role Name
+Pocketbase
 =========
 
-A brief description of the role goes here.
+Pocketbase instance as a quadlet. Designed to be used multiple times on the same server.
 
 Requirements
 ------------
 
-Any pre-requisites that may not be covered by Ansible itself or the role should be mentioned here. For instance, if the role uses the EC2 module, it may be a good idea to mention in this section that the boto package is required.
+Podman and CentOs-based / Fedora Server
 
 Role Variables
 --------------
 
-A description of the settable variables for this role should go here, including any variables that are in defaults/main.yml, vars/main.yml, and any variables that can/should be set via parameters to the role. Any variables that are read from other roles and/or the global scope (ie. hostvars, group vars, etc.) should be mentioned here as well.
+| option | default | description |
+| --- | --- | --- |
+| `pb_instance_name` | <you need to set this> | technical name for this pocketbase instance |
+| `pb_instance_port` | 8081 | `please change this`. port on the server, locally, instance exposed |
+
 
 Dependencies
 ------------
 
-A list of other roles hosted on Galaxy should go here, plus any details in regards to parameters that may need to be set for other roles, or variables that are used from other roles.
+* 3n3a.podman
 
 Example Playbook
 ----------------
@@ -26,6 +30,19 @@ Including an example of how to use your role (for instance, with variables passe
     - hosts: servers
       roles:
          - { role: username.rolename, x: 42 }
+
+### install directly from here
+
+add the following to your `requirements.yml`
+
+```yaml
+---
+roles:
+  - name: 3n3a.pocketbase
+    src: git+ssh://git@github.com:22/3n3a/ansible-role-pocketbase.git
+    version: master
+    scm: git
+```
 
 License
 -------

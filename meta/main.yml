@@ -1,4 +1,5 @@
 galaxy_info:
+  role_name: pocketbase
   author: 3n3a
   description: Pocketbase as a podman quadlet
   company: "3n3a IT"
