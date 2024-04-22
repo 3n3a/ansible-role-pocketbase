@@ -8,9 +8,9 @@
     group: "{{ ansible_user }}"
     mode: '0755'
   loop:
-  - "/opt/{{ pb_container_hostname }}-{{ pb_instance_name }}"
-  - "/opt/{{ pb_container_hostname }}-{{ pb_instance_name }}/data"
-  - "/opt/{{ pb_container_hostname }}-{{ pb_instance_name }}/public"
+  - "/opt/{{ pb_container_name }}-{{ pb_instance_name }}"
+  - "/opt/{{ pb_container_name }}-{{ pb_instance_name }}/data"
+  - "/opt/{{ pb_container_name }}-{{ pb_instance_name }}/public"
 
 # copy configuration
 - name: Ensure pocketbase network is present
