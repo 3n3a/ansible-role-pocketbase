@@ -20,4 +20,4 @@ galaxy_info:
     - pocketbase
 
 dependencies:
-  - 3n3a.podman
+  - 3n3a.podman:master
